@@ -18,12 +18,7 @@ The **Backup Cleanup Tool** is a scheduled task plugin for **Moodle** that autom
 
 ## 🛠️ Installation
 
-1.  **Download the plugin** or clone the repository into your Moodle tool directory:
-    
-    sh
-    
-    CopiarEditar
-    
+1.  **Download the plugin** or clone the repository into your Moodle tool directory:    
     `git clone https://github.com/your-repo/tool_backup_cleanup.git admin/tool/backup_cleanup` 
     
 2.  **Visit the Moodle admin page** to complete the installation.
