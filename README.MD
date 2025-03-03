@@ -29,12 +29,12 @@ The **Backup Cleanup Tool** is a scheduled task plugin for **Moodle** that autom
 
 Go to `Site Administration > Plugins > Backup Cleanup` to set up:
 
-| Setting                        | Description                                       |
-|--------------------------------|---------------------------------------------------|
-| **Enable**                     | Toggle the cleanup task on/off.                  |
-| **Remove course backups older than**  | Define TTL for course backups (in seconds). |
-| **Remove activity backups older than** | Define TTL for activity backups (in seconds). |
-| **Remove private backups older than**  | Define TTL for private backups (in seconds). |
+| Setting                        | Description                              | Default    |
+|--------------------------------|------------------------------------------|------------|
+| **Enable**                     | Toggle the cleanup task on/off.      | Enabled |
+| **Remove course backups older than**  | Define TTL for course backups.  | 30 days |
+| **Remove activity backups older than** | Define TTL for activity backups.  | 7 days  |
+| **Remove private backups older than**  | Define TTL for private backups. | 7 days  |
 
 ## 🔄 Scheduled Task Execution
 
