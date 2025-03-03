@@ -13,7 +13,6 @@ The **Backup Cleanup Tool** is a scheduled task plugin for **Moodle** that autom
     -   **Course backups** 🏫
     -   **Activity backups** 📌
     -   **Private backups** 🔒
--   ✅ Error handling and logging for removed files.
 -   ✅ Supports Moodle **3.8 - 4.0+**.
 
 ## 🛠️ Installation
