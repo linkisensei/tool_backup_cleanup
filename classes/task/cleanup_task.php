@@ -9,12 +9,14 @@ class cleanup_task extends scheduled_task {
 
     protected $config;
     protected $db;
+    protected $fs;
 
     public function __construct(){
         global $DB;
 
         $this->config = get_config('tool_backup_cleanup');
         $this->db = $DB;
+        $this->fs = get_file_storage();
     }
 
     public function get_name() {
@@ -33,8 +35,6 @@ class cleanup_task extends scheduled_task {
         if(!$this->get_config('enabled', false)){
             mtrace("Manual backup cleanup task disabled...");
         }
-
-        $fs = get_file_storage();
         $recordset = $this->get_expired_backups_recordset();
 
         foreach ($recordset as $record) {
@@ -42,7 +42,7 @@ class cleanup_task extends scheduled_task {
             $file_identifier = "$record->component/$record->filearea/$record->itemid/$filename";
 
             try {
-                $file = $fs->get_file_instance($record);
+                $file = $this->fs->get_file_instance($record);
                 $file->delete();
 
                 mtrace("\"$file_identifier\" was removed");
