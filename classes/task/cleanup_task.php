@@ -34,6 +34,7 @@ class cleanup_task extends scheduled_task {
     public function execute(){
         if(!$this->get_config('enabled', false)){
             mtrace("Manual backup cleanup task disabled...");
+            return;
         }
         $recordset = $this->get_expired_backups_recordset();
 
