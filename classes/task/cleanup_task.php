@@ -45,7 +45,7 @@ class cleanup_task extends scheduled_task {
                 $file = $this->fs->get_file_instance($record);
                 $file->delete();
 
-                mtrace("\"$file_identifier\" was removed");
+                mtrace("\"$file_identifier\" was removed (filesize = $record->filesize)");
 
             } catch (\Throwable $th) {
                 mtrace("Error while removing \"$file_identifier\". " . $th->getMessage());
